@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?.lua;/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?/init.lua;/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?.lua;/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1727870382/lib/lua/5.1/?.so"
+local package_path_str = "/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/azizbekphd/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,10 +74,20 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["blamer.nvim"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/blamer.nvim",
+    url = "https://github.com/APZelos/blamer.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -143,20 +153,50 @@ _G.packer_plugins = {
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neotest = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/neotest",
+    url = "https://github.com/nvim-neotest/neotest"
+  },
+  ["neotest-jest"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/neotest-jest",
+    url = "https://github.com/nvim-neotest/neotest-jest"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
+  },
+  ["nvim-spectre"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    url = "https://github.com/nvim-pack/nvim-spectre"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -168,15 +208,31 @@ _G.packer_plugins = {
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["refactoring.nvim"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   ["twilight.nvim"] = {
     loaded = true,
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/twilight.nvim",
     url = "https://github.com/folke/twilight.nvim"
+  },
+  ["typescript-tools.nvim"] = {
+    config = { "\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0" },
+    loaded = true,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/typescript-tools.nvim",
+    url = "https://github.com/pmizio/typescript-tools.nvim"
   },
   undotree = {
     loaded = true,
@@ -203,6 +259,12 @@ _G.packer_plugins = {
     path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/start/vim-signify",
     url = "https://github.com/mhinz/vim-signify"
   },
+  ["vscode-js-debug"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/azizbekphd/.local/share/nvim/site/pack/packer/opt/vscode-js-debug",
+    url = "https://github.com/microsoft/vscode-js-debug"
+  },
   ["zen-mode.nvim"] = {
     config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rzen-mode\frequire\0" },
     loaded = true,
@@ -216,6 +278,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for gruvbox-material]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme gruvbox-material\bcmd\bvim\0", "config", "gruvbox-material")
 time([[Config for gruvbox-material]], false)
+-- Config for: typescript-tools.nvim
+time([[Config for typescript-tools.nvim]], true)
+try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0", "config", "typescript-tools.nvim")
+time([[Config for typescript-tools.nvim]], false)
 -- Config for: zen-mode.nvim
 time([[Config for zen-mode.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")

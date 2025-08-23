@@ -55,4 +55,5 @@ end)
 vim.keymap.set("n", "<C-p>", function()
     vim.lsp.diagnostic.goto_next()
 end)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename symbol" })
 

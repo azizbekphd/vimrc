@@ -34,6 +34,8 @@ vim.opt.splitright = true
 vim.opt.winfixheight = true
 vim.opt.winfixwidth = true
 
+vim.opt.guicursor = ""
+
 --Python
 vim.g.python3_host_prog = '/opt/homebrew/bin/python3'
 
