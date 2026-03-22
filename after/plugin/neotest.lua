@@ -3,14 +3,17 @@ local neotest = require("neotest")
 neotest.setup({
   adapters = {
     require("neotest-jest")({
-      -- Jest config options (optional)
-      jestCommand = "npm test --",  -- e.g., "yarn test" or "pnpm test"
-      jestConfigFile = "jest.config.js", -- or "jest.config.ts", etc.
-      env = { CI = true },          -- Custom env vars
-      cwd = function(path)          -- Set working directory
+      jestCommand = "npm test --",
+      jestArguments = function(defaultArguments, context)
+        return defaultArguments
+      end,
+      jestConfigFile = "custom.jest.config.ts",
+      env = { CI = true },
+      cwd = function(path)
         return vim.fn.getcwd()
       end,
-    })
+      isTestFile = require("neotest-jest.jest-util").defaultIsTestFile,
+    }),
   },
   -- Other Neotest settings (optional)
   status = { virtual_text = true },
